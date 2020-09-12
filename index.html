@@ -56,19 +56,40 @@ Prof. Dr. Christof Schöch (Trier)
 # Einleitung
 
 --
-## Ziele 
-1. Das Verständnis für Open Access fördern <!-- .element: class="fragment" data-fragment-index="1" --> 
-1. Dazu motivieren, selbst im Open Access zu publizieren <!-- .element: class="fragment" data-fragment-index="2" --> 
-1. Aufzeigen, dass Open Access mehr ist als kostenloses Lesen <!-- .element: class="fragment" data-fragment-index="3" --> 
-1. Aufzeigen, dass digitale Publikationen mehr sein können als PDF-Dateien <!-- .element: class="fragment" data-fragment-index="4" --> 
+## Ziele / Aufbau
+1. Meine Motivation für "offene (und expressive) Formate" <!-- .element: class="fragment" data-fragment-index="1" --> 
+1. Informationen und ihre Repräsentation <!-- .element: class="fragment" data-fragment-index="2" --> 
 
+
+-
+# Motivation
 
 --
-## Überblick
-1. [Hintergrund und Motivation](#/2)
-1. [Open Access für die Maschinen](#/3)
-1. [Fazit](#/4)
+## Projekt MiMoText
+<img data-src="mimotext-overview.png" height="500px"/>
 
+::
+- Drei Informationsquellen: Bibliographie (Bibliographie du genre romanesque francais); Sekundärliteratur (Literaturgeschichten); Primärliteratur (Volltexte der Romane) 
+- Ziel: Informationen extrahieren, als LOD modellieren und zusammenführen
+
+--
+## Informationsnetzwerk
+<img data-src="network-of-information.png" height="500px"/>
+
+::
+- Hier: Informationen aus der Bibliographie (RDF, siehe Lüscho) und aus den Romanen (Topic Modeling auf 70 Romanen)
+- Warum Motivation: weil es frustrierend ist, dass wir so viel Forschungsliteratur haben, aber das enthaltene Wissen so mühsam zu extrahieren ist: (a) Digitalisierung, (b) open Access, (c) strukturierte Informationen
+
+--
+## Drei Desiderate
+* Mehr Digitalisierung älterer Fachliteratur
+* Mehr Daten im Open Access verfügbar (UrhG!)
+* Mehr strukturierte Informationen
+
+::
+- Daraus doppelte Perspektive: 
+- (1) Wie können wir ältere Literatur auswerten / aufbereiten?
+- (2) Wie können wir Publikationen so verbessern, dass das in Zukunft einfacher wird? 
 
 
 -
@@ -76,9 +97,10 @@ Prof. Dr. Christof Schöch (Trier)
 
 
 --
-## PDF vs. andere Formate
-* PDF-Dateien sind eine digitale Kopie des gedruckten Buchs
-* PDF-Dateien sind ein Rezeptionsformat
+## Jenseits des PDF
+* PDF
+  * digitale Kopie des gedruckten Buchs
+  * Rezeptionsformat 
 * Als Referenz- oder Archivformat sind sie ungeeignet
 * Frage: Informationen und Formate?
 
@@ -95,62 +117,63 @@ Prof. Dr. Christof Schöch (Trier)
 1. Textinhalt (Schlagworte, Kernaussagen) <!-- .element: class="fragment" data-fragment-index="4" --> 
 
 --
-## Bibliographien
-* in maschinenlesbaren Formaten: BibTex, BibJSON 
-* mit persistenten Identifikatoren: DOIs 
-* Software unterstützt dabei: Zotero, Citavi, etc. 
-* die BibTeX-Datei sollte als Supplement zum Artikel publiziert werden 
+## (1) Bibliografische Angaben
+* Wo stehen wir? 
+  * Plattformen wie CiteSeerX machen Zitationsdaten verfügbar
+  * Müssen Sie crawlen und (meist) strukturieren
+* Wo sollten wir hinkommen?
+  * Jeder Artikel liefert Referenzen in strukturierter Form mit 
+  * Eingebettet in XML (TEI/JATS) oder als BibTeX/BibJSON-Supplement
+
 
 --
-## Das BibTeX-Format
-<small>Benureau, Fabien C. Y., and Nicolas P. Rougier. "Re-Run, Repeat, Reproduce, Reuse, Replicate: Transforming Code into Scientific Contributions." *Frontiers in Neuroinformatics* 11 (January 4, 2018). DOI: https://doi.org/10.3389/fninf.2017.00069.</small>
-<br/><br/>
-<a href="data/bibtex.bib"><img height="400" data-src="img/bibtex1.png"/></a>
+## (2) Textstruktur
+* Wo stehen wir? <!-- .element: class="fragment" data-fragment-index="1" --> 
+  * Nur wenige Plattformen bieten XML an (OpenEdition, OLH, DHQ, ZfdG)
+* Wo sollten wir hinkommen? <!-- .element: class="fragment" data-fragment-index="2" --> 
+  * Zeitschriften bieten grundsätzlich XML (und EPUB, PDF) an
+  * Kodieren grundsätzlich Makrostruktur und Mikrostruktur
 
---
-## Textstruktur
-* Makrostruktur <!-- .element: class="fragment" data-fragment-index="1" --> 
-    * Metadaten
-    * Haupttext
-    * Bibliographie
-* Mikrostruktur <!-- .element: class="fragment" data-fragment-index="2" --> 
-    * Abstract
-    * Einleitung
-    * Analyse
-    * Zitate
-    * Fußnoten
-    * Fazit
+::
+- Makrostruktur: bspw. Abstract vs. Haupttext
+- Mikrostruktur: bspw. Zitate innerhalb des Haupttextes
 
 --
 ## Ein Artikel in XML-TEI
 <br/><a href="data/jtei-oc-ds-schoch-144-source.xml"><img height="550" data-src="img/jtei-xml.png"/></a>
 
 --
-## Entitäten mit Normdaten
-* Entitäten <!-- .element: class="fragment" data-fragment-index="1" --> 
-    * Personen (Autoren, historische Figuren, etc.)
-    * Orte (Länder, Städte, Straßen, etc.)
-    * Organisationen (Verlage, Firmen, NGOs, Ministerien, etc.)
-    * Forschungsgegenstände (Romane, Gemälde, Proteine, Viren, etc.)
-* Normdaten <!-- .element: class="fragment" data-fragment-index="2" --> 
-    * Identifikation (und Disambiguierung)
-    * Ergänzung weiterer Informationen
-    * GND, VIAF, Wikidata, Geonames, etc.
+## (3) Entitäten mit Normdaten
+* Wo stehen wir? <!-- .element: class="fragment" data-fragment-index="1" --> 
+    * Entitäten vereinzelt als Schlagworte
+    * Teilweise indirekt und unstrukturiert via Register / Index
+    * Ansonsten meist nur Volltextsuche
+* Wo müssten wir hinkommen? <!-- .element: class="fragment" data-fragment-index="2" --> 
+    * Entitäten werden im Text markiert und identifiziert
+    * Normdatenquellen: GND, VIAF, Wikidata, Geonames, etc.
+
+::
+- Entitäten: Persone, Orte, Organisationen, Forschungsgegenstände
+- Bspw. Forschungsgegenstände: Romane, Gemälde, Ereignisse, Proteine uvm.
+- In XML wäre das problemlos möglich: `<entity>` @type und @ref
+
 
 --
-## Beispiel: Ortsnamen in einem Artikel
-<a href="https://recogito.pelagios.org/document/kqhzjlljz7tsuc/map"><img height="550" data-src="img/recogito.png"/></a>
-<small>Quelle: [Recogito in Pelagios](https://recogito.pelagios.org/) angewandt auf: Sautkin & Philippova, *Creativity Studies*, 2018, [URL](https://journals.vgtu.lt/index.php/CS/article/download/5519/4787).</small>
+## (4) Maschinenlesbarer Inhalt (LOD)
+* Wo stehen wir? <!-- .element: class="fragment" data-fragment-index="1" --> 
+  * Abtracts und Schlagworte (= unstrukturiert)
+  * Vorschlag "semantic abstracts" von Shutton 199X
+  * Seither wenig sichtbarer Fortschritt
+* Wo müssten wir hinkommen?<!-- .element: class="fragment" data-fragment-index="2" --> 
+  * Thesen, Beobachtungen und Ergebnisse als LOD-Statements  
+  * Hindernisse: Mangel an Vokabularen und Ontologien für diverse Fachgebiete
+  * Hindernisse: Aufwand für die Formulierung der Statements
+  * Lösungsansatz: 
+  * Taxonomy Learning, vgl. Wang et al. 2017)
+  * Information Extraction
 
---
-## Linked Open Data
-* Maschinenlesbare Informationen über die Publikation <!-- .element: class="fragment" data-fragment-index="1" --> 
-* Als XML in den Artikel eingebettet <!-- .element: class="fragment" data-fragment-index="2" --> 
-* Metadaten einerseits <!-- .element: class="fragment" data-fragment-index="3" --> 
-    * Autoren, Publikationsdatum, Publikationsort, etc.
-* Auf den Textinhalt bezogen <!-- .element: class="fragment" data-fragment-index="4" --> 
-    * erwähnte Entitäten
-    * zentrale Aussagen
+::
+- Taxonomy Learning: Auch für die Zuordnung von Wörtern zu Hypernymen und dann zu Normdaten
 
 --
 ## Linked Open Data
@@ -184,8 +207,9 @@ ISBN:9780141985411 ...
 # Abschluss
 
 --
-## Fazit 
+## Wo stehen wir?  
 
+1. Bibliographische Daten:  
 * Open Access ist mehr als kostenfreies Lesen von Publikationen <!-- .element: class="fragment" data-fragment-index="1" --> 
 * Digitale Publikationen können mehr sein als digitalisierte Druckerzeugnisse <!-- .element: class="fragment" data-fragment-index="2" --> 
 * Open Access und offene Datenformate gehören zusammen <!-- .element: class="fragment" data-fragment-index="3" --> 
@@ -194,15 +218,15 @@ ISBN:9780141985411 ...
 --
 ## Weitere Informationen
 
-* Informationsplattform Open Access: https://open-access.net/startseite
-* Directory of Open Access Journals (DOAJ): http://doaj.org/
-* Peter Suber: *Open Access* (MIT, 2012): https://mitpress.mit.edu/books/open-access
-* Christian Heise: *Von Open Access zu Open Science* (2018), https://meson.press/books/von-open-access-zu-open-science/
 
 
 --
 ## Referenzen
 <small>
+* Lüschow 2020
+* Schöch "Open Access für die Maschinen" 
+* Schöch "Abgeleitete Textformate" 
+* Shotton Semantic Abstracts" 
 * "Budapest Declaration on Open Access", 2002, https://www.budapestopenaccessinitiative.org/read. 
 * "Business Models", in: OADwiki, http://oad.simmons.edu/oadwiki/OA_journal_business_models.
 * "Geschäftsmodelle", in: open-access.net, https://open-access.net/informationen-zu-open-access/geschaeftsmodelle
