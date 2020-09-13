@@ -36,29 +36,30 @@ document.getElementsByTagName( 'head' )[0].appendChild( link );
 <!-- THIS IS WHERE THE CONTENT GOES! -->
 <!-- Any section element inside of this container is displayed as a slide -->
 
-##Offene Publiationsformate für Open Science
+##Offene Publiationsformate<br/>für Open Science
 <hr/>
 <br/>
+<br/>
 Prof. Dr. Christof Schöch (Trier)
+<br/>Folien: https://mimotext.github.io/oam/#/
 <br/>
 <br/>***Open Access Tage 2020***
 <br/>**15.-17.9.2020, Bielefeld**
-<br/>
-<br/>Folien: https://mimotext.github.io/oam/#/
 <br/>
 <br/>
 <hr/>
 <img height="50" data-src="img/basics/uni-trier.png"></img>&nbsp;&nbsp;&nbsp;<img height="55" data-src="img/basics/tcdh-logo.png"></img>
 
-
-
--
-# Einleitung
-
---
-## Ziele / Aufbau
-1. Meine Motivation für "offene (und expressive) Formate" <!-- .element: class="fragment" data-fragment-index="1" --> 
-1. Informationen und ihre Repräsentation <!-- .element: class="fragment" data-fragment-index="2" --> 
+::
+- Ich freue mich, heute im Rahmen der Open Access Tage sprechen zu können
+- Bedauere es sehr, dass ich einen leider unauflösbaren Terminkonflikt habe
+- Hoffe, es geht auch so! 
+- Meine Kollegin Dr. Maria Hinzmann ist hier, um Fragen zu beantworten und ihre Anregungen mitzunehmen
+- Thema: Offene Publikationsformate für Open Science
+- Ich möchte zunächst kurz darlegen, was mich zu diesem Thema motiviert hat
+- Dann den Stand der Dinge skizzieren, wie ich in derzeit sehe
+- Dabei auch Vorschläge für die nächsten Schritte machen
+- Und (eigentlich!) auch von Ihnen zu hören, welche Prioritäten Sie sehen
 
 
 -
@@ -69,6 +70,7 @@ Prof. Dr. Christof Schöch (Trier)
 <img data-src="img/mimotext-overview.png" height="500px"/>
 
 ::
+- laufendes Projekt am TCDH der Universität Trier
 - Drei Informationsquellen: Bibliographie (Bibliographie du genre romanesque francais); Sekundärliteratur (Literaturgeschichten); Primärliteratur (Volltexte der Romane) 
 - Ziel: Informationen extrahieren, als LOD modellieren und zusammenführen
 
@@ -77,20 +79,20 @@ Prof. Dr. Christof Schöch (Trier)
 <img data-src="img/network-of-information.png" height="500px"/>
 
 ::
-- Hier: Informationen aus der Bibliographie (RDF, siehe Lüscho) und aus den Romanen (Topic Modeling auf 70 Romanen)
+- Hier: Informationen aus der Bibliographie (RDF, siehe Lüschow) und aus den Romanen (Topic Modeling auf 70 Romanen)
 - Warum Motivation: weil es frustrierend ist, dass wir so viel Forschungsliteratur haben, aber das enthaltene Wissen so mühsam zu extrahieren ist: (a) Digitalisierung, (b) open Access, (c) strukturierte Informationen
 
 --
 ## Drei Desiderate
-* Mehr Digitalisierung älterer Fachliteratur
-* Mehr Daten im Open Access verfügbar (UrhG!)
-* Mehr strukturierte Informationen
+1. Mehr Digitalisierung älterer Fachliteratur
+1. Mehr Daten im Open Access verfügbar (UrhG!)
+1. Mehr strukturierte Informationen
 
 ::
 - Daraus doppelte Perspektive: 
-- (1) Wie können wir ältere Literatur auswerten / aufbereiten?
-- (2) Wie können wir Publikationen so verbessern, dass das in Zukunft einfacher wird? 
-
+- (1) Die retrospektive Sicht: Wie können wir ältere Literatur auswerten / aufbereiten?
+- (2) Die prospektive Sicht: Wie können wir Publikationen so verbessern, dass das in Zukunft einfacher wird? 
+- Während es im Projekt um die retrospektive Sicht geht, soll es hier heute vor allem um die prospektive Sicht gehen.
 
 -
 # Open Access für die Maschinen
@@ -111,34 +113,40 @@ Prof. Dr. Christof Schöch (Trier)
 
 --
 ## Welche Informationen?
-1. Bibliografische Angaben <!-- .element: class="fragment" data-fragment-index="1" --> 
-1. Textstruktur <!-- .element: class="fragment" data-fragment-index="2" --> 
+1. Bibliografische Angaben (Metadaten, Referenzen) <!-- .element: class="fragment" data-fragment-index="1" --> 
+1. Textstruktur (Makrostruktur, Mikrostruktur) <!-- .element: class="fragment" data-fragment-index="2" --> 
 1. Entitäten (Personen, Orte, Konzepte, Gegenstände) <!-- .element: class="fragment" data-fragment-index="3" --> 
 1. Textinhalt (Schlagworte, Kernaussagen) <!-- .element: class="fragment" data-fragment-index="4" --> 
 
+::
+- Bibliografisches: Metadaten des Artikels; alle Referenzen
+- Textstruktur: Makrostruktur (bspw. Abstract vs. Haupttext) und Mikrostruktur (bspw. Zitate innerhalb des Haupttextes)
+- Entitäten: Persone, Orte, Organisationen, Forschungsgegenstände
+- Textinhalt: Abstract, Schlagworte, vor allem aber: Kernaussagen in semantisch kodierter Form (LOD / Triples)
+
+
 --
 ## (1) Bibliografische Angaben
-* Wo stehen wir? 
+* Wo stehen wir?  <!-- .element: class="fragment" data-fragment-index="1" --> 
   * Plattformen wie CiteSeerX machen Zitationsdaten verfügbar
   * Müssen Sie crawlen und (meist) strukturieren
-* Wo sollten wir hinkommen?
+* Wo sollten wir hinkommen? <!-- .element: class="fragment" data-fragment-index="2" --> 
   * Jeder Artikel liefert Referenzen in strukturierter Form mit 
   * Eingebettet in XML (TEI/JATS) oder als BibTeX/BibJSON-Supplement
 
 ::
-- Siehe auch: Initiativen wie OpenAIRE Research Graph, die Forschungsoutput modellieren, allerdings auch ohne die eigentlichen Inhalte zu berücksichtigen.)
+- Siehe auch: Initiativen wie OpenAIRE Research Graph (Vortrag in der OpenAire Session, die folgt!), die Forschungsoutput modellieren, allerdings auch ohne die eigentlichen Inhalte zu berücksichtigen.)
 
 --
 ## (2) Textstruktur
 * Wo stehen wir? <!-- .element: class="fragment" data-fragment-index="1" --> 
-  * Nur wenige Plattformen bieten XML an (OpenEdition, OLH, DHQ, ZfdG)
+  * Einige Plattformen bieten XML an (OpenEdition, OLH, DHQ, ZfdG)
+  * Nutzen dafür JATS oder XML-TEI
 * Wo sollten wir hinkommen? <!-- .element: class="fragment" data-fragment-index="2" --> 
   * Zeitschriften bieten grundsätzlich XML (und EPUB, PDF) an
-  * Kodieren grundsätzlich Makrostruktur und Mikrostruktur
+  * XML kodiert Makrostruktur und Mikrostruktur
+  * Editoren kodieren das automatisch (semantische Formatvorlagen)
 
-::
-- Makrostruktur: bspw. Abstract vs. Haupttext
-- Mikrostruktur: bspw. Zitate innerhalb des Haupttextes
 
 --
 ## Ein Artikel in XML-TEI
@@ -153,9 +161,9 @@ Prof. Dr. Christof Schöch (Trier)
 * Wo müssten wir hinkommen? <!-- .element: class="fragment" data-fragment-index="2" --> 
     * Entitäten werden im Text markiert und identifiziert
     * Normdatenquellen: GND, VIAF, Wikidata, Geonames, etc.
+    * Auch hier: Schreibprogramm macht Vorschläge, Autor:in disambiguiert
 
 ::
-- Entitäten: Persone, Orte, Organisationen, Forschungsgegenstände
 - Bspw. Forschungsgegenstände: Romane, Gemälde, Ereignisse, Proteine uvm.
 - In XML wäre das problemlos möglich: `<entity>` @type und @ref
 
@@ -164,8 +172,7 @@ Prof. Dr. Christof Schöch (Trier)
 ## (4) Maschinenlesbarer Inhalt (LOD)
 * Wo stehen wir? <!-- .element: class="fragment" data-fragment-index="1" --> 
   * Abtracts und Schlagworte (= unstrukturiert)
-  * Vorschlag "semantic abstracts" von Shutton 199X
-  * Seither wenig sichtbarer Fortschritt
+  * Vorschlag "semantic abstracts" von David Shotton 2009
 * Wo müssten wir hinkommen?<!-- .element: class="fragment" data-fragment-index="2" --> 
   * Thesen, Beobachtungen und Ergebnisse als LOD-Statements  
   * Hindernisse: Mangel an Vokabularen und Ontologien für diverse Fachgebiete
@@ -175,6 +182,9 @@ Prof. Dr. Christof Schöch (Trier)
   * Information Extraction
 
 ::
+- Seit David Shottons Vorschlag wenig sichtbarer Fortschritt
+- Ich habe aber den Eindruck, es passiert doch einiges
+- Beispiel: Open Knowledge Research Graph der TIB Hannover (Sören Auer)
 - Taxonomy Learning: Auch für die Zuordnung von Wörtern zu Hypernymen und dann zu Normdaten
 
 --
@@ -186,14 +196,14 @@ ISBN:9780141985411 ...
 * HAS_TITLE "Weapons of Math Destruction"
 * HAS_PUBLICATION_YEAR "2016"
 * HAS_SUBJECT "Big Data"
-* MENTIONS "Sense Networks"
+* MENTIONS_ENTITY "Sense Networks"
 * HAS_THESIS {"Big Data" REINFORCES "discrimination"}
 * HAS_CONCLUSION {"AI" REQUIRES "regulation"}
 
 </small>
 
 --
-## Was ermöglichst das? 
+## Offene Formate ermöglichen Open Science 
 * Intelligente Suche über viele Publikationen <!-- .element: class="fragment" data-fragment-index="1" --> 
 * Analyse von Zitationsnetzwerken  <!-- .element: class="fragment" data-fragment-index="2" --> 
 * Visualisierungen wie Karten, Zeitleisten uvm. <!-- .element: class="fragment" data-fragment-index="3" --> 
@@ -209,16 +219,18 @@ ISBN:9780141985411 ...
 # Abschluss
 
 --
-## Wo stehen wir?  
+## Persönliches Fazit
+* Derzeit einiges in Bewegung
+* Mehraufwand für Autor:innen oder Herausgerber:innen?
+* Bessere Software! 
+* Ihre Meinung?
 
-1. Bibliographische Daten:  
-* Open Access ist mehr als kostenfreies Lesen von Publikationen <!-- .element: class="fragment" data-fragment-index="1" --> 
-* Digitale Publikationen können mehr sein als digitalisierte Druckerzeugnisse <!-- .element: class="fragment" data-fragment-index="2" --> 
-* Open Access und offene Datenformate gehören zusammen <!-- .element: class="fragment" data-fragment-index="3" --> 
+::
+- Ich glaube nicht, dass sich die skizzierte Vision umsetzen lässt, wenn man den Zusatzaufwand den Autor:innen aufbürdet
+- Aber auch die nachträgliche Aufwertung, Annotation, Auszeichnung der Texte im Redaktionsprozess ist nicht sinnvoll
+- Wir brauchen endlich wissenschaftsadäquate, semantische Schreibsoftware, die den Schreibprozess adäquat unterstützt
+- Größtes Hindernis: der Mangel an geeigneten Ontologien oder Vokabularien für viele Wissenschaftsbereiche
 
-
---
-## Weitere Informationen
 
 
 
