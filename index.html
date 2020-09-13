@@ -38,9 +38,8 @@ document.getElementsByTagName( 'head' )[0].appendChild( link );
 
 ##Offene Publiationsformate<br/>für Open Science
 <hr/>
-<br/>
-<br/>
-Prof. Dr. Christof Schöch (Trier)
+<br/><img height="280" style="float:right" data-src="img/basics/christof-schoech_2018c.jpeg">
+<br/>Prof. Dr. Christof Schöch (Trier)
 <br/>Folien: https://mimotext.github.io/oam/#/
 <br/>
 <br/>***Open Access Tage 2020***
@@ -51,15 +50,15 @@ Prof. Dr. Christof Schöch (Trier)
 <img height="50" data-src="img/basics/uni-trier.png"></img>&nbsp;&nbsp;&nbsp;<img height="55" data-src="img/basics/tcdh-logo.png"></img>
 
 ::
-- Ich freue mich, heute im Rahmen der Open Access Tage sprechen zu können
-- Bedauere es sehr, dass ich einen leider unauflösbaren Terminkonflikt habe
+- Ich freue mich, heute im Rahmen der OAT sprechen zu können
+- Bedauere es sehr, dass ich Terminkonflikt habe
 - Hoffe, es geht auch so! 
 - Meine Kollegin Dr. Maria Hinzmann ist hier, um Fragen zu beantworten und ihre Anregungen mitzunehmen
 - Thema: Offene Publikationsformate für Open Science
-- Ich möchte zunächst kurz darlegen, was mich zu diesem Thema motiviert hat
-- Dann den Stand der Dinge skizzieren, wie ich in derzeit sehe
+- Zunächst kurz darlegen, was mich zu diesem Thema motiviert hat
+- Dann Stand der Dinge skizzieren
 - Dabei auch Vorschläge für die nächsten Schritte machen
-- Und (eigentlich!) auch von Ihnen zu hören, welche Prioritäten Sie sehen
+- Und von Ihnen zu hören, welche Prioritäten Sie sehen
 
 
 -
@@ -68,48 +67,50 @@ Prof. Dr. Christof Schöch (Trier)
 --
 ## Projekt MiMoText
 <img data-src="img/mimotext-overview.png" height="500px"/>
+<br/>Mining and Modeling Text – https://mimotext.uni-trier.de
 
 ::
-- laufendes Projekt am TCDH der Universität Trier
-- Drei Informationsquellen: Bibliographie (Bibliographie du genre romanesque francais); Sekundärliteratur (Literaturgeschichten); Primärliteratur (Volltexte der Romane) 
+- laufendes Projekt am TCDH der Universität Trier, von Dr. Hinzmann koordiniert
+- Gegenstand: französischer Roman des 18. Jahrhunderts
+- Drei Informationsquellen: 
+- (1) Metadaten aus Nachweissystemen (Bibliographie du genre romanesque francais); 
+- (2) Sachinformationen aus Fachliteratur (Literaturgeschichten); 
+- (3) Texteigenschaften aus Primärtexten (Volltexte der Romane) 
 - Ziel: Informationen extrahieren, als LOD modellieren und zusammenführen
 
 --
-## Informationsnetzwerk
-<img data-src="img/network-of-information.png" height="500px"/>
+## MiMoText-Informationsnetzwerk
+<img data-src="img/network-of-information.png" height="550px"/>
 
 ::
-- Hier: Informationen aus der Bibliographie (RDF, siehe Lüschow) und aus den Romanen (Topic Modeling auf 70 Romanen)
-- Warum Motivation: weil es frustrierend ist, dass wir so viel Forschungsliteratur haben, aber das enthaltene Wissen so mühsam zu extrahieren ist: (a) Digitalisierung, (b) open Access, (c) strukturierte Informationen
+- (1) Setting
+- (2) Themen 
 
 --
-## Drei Desiderate
-1. Mehr Digitalisierung älterer Fachliteratur
-1. Mehr Daten im Open Access verfügbar (UrhG!)
-1. Mehr strukturierte Informationen
+## Motivation 
+1. Drei Desiderate <!-- .element: class="fragment" data-fragment-index="1" --> 
+    1. Mehr Digitalisierung älterer Fachliteratur
+    1. Mehr Daten im Open Access verfügbar (UrhG!)
+    1. Mehr strukturierte Informationen
+1. Zwei Perspektiven <!-- .element: class="fragment" data-fragment-index="2" --> 
+    1. Retrospektive Sicht (Projekt)
+    1. Prospektive Sicht (weiterer Vortrag)
 
 ::
+- Warum Motivation: weil es frustrierend ist, dass wir so viel Forschungsliteratur haben, aber das enthaltene Wissen so mühsam zu extrahieren ist: (a) Digitalisierung, (b) open Access, (c) strukturierte Informationen
 - Daraus doppelte Perspektive: 
-- (1) Die retrospektive Sicht: Wie können wir ältere Literatur auswerten / aufbereiten?
-- (2) Die prospektive Sicht: Wie können wir Publikationen so verbessern, dass das in Zukunft einfacher wird? 
-- Während es im Projekt um die retrospektive Sicht geht, soll es hier heute vor allem um die prospektive Sicht gehen.
+-- (1) Die retrospektive Sicht: Wie können wir ältere Literatur auswerten / aufbereiten?
+-- (2) Die prospektive Sicht: Wie können wir Publikationen so verbessern, dass das in Zukunft einfacher wird? 
+-- Während es im Projekt um die retrospektive Sicht geht, soll es hier heute vor allem um die prospektive Sicht gehen.
 
 -
 # Open Access für die Maschinen
 
-
---
-## Jenseits des PDF
-* PDF
-  * digitale Kopie des gedruckten Buchs
-  * Rezeptionsformat 
-* Als Referenz- oder Archivformat sind sie ungeeignet
-* Frage: Informationen und Formate?
-
 ::
+- Sicherlich wenig umstritten:
+- Das PDF als digitale Kopie des gedruckten Buchs: allenfalls Rezeptionsformat, aber kein Referenz- oder Archivformat
 - Sehr viele Informationen sind in anderen Formaten besser aufgehoben
 - Nicht nur als separate Metadaten, sondern von Anfang den Text so denken
-- Kontext "single-source publishing"
 
 --
 ## Welche Informationen?
@@ -129,24 +130,25 @@ Prof. Dr. Christof Schöch (Trier)
 ## (1) Bibliografische Angaben
 * Wo stehen wir?  <!-- .element: class="fragment" data-fragment-index="1" --> 
   * Plattformen wie CiteSeerX machen Zitationsdaten verfügbar
-  * Müssen Sie crawlen und (meist) strukturieren
+  * Erfordert: crawlen und (meist) strukturieren
 * Wo sollten wir hinkommen? <!-- .element: class="fragment" data-fragment-index="2" --> 
   * Jeder Artikel liefert Referenzen in strukturierter Form mit 
   * Eingebettet in XML (TEI/JATS) oder als BibTeX/BibJSON-Supplement
 
 ::
 - Siehe auch: Initiativen wie OpenAIRE Research Graph (Vortrag in der OpenAire Session, die folgt!), die Forschungsoutput modellieren, allerdings auch ohne die eigentlichen Inhalte zu berücksichtigen.)
+- Das könnte man eigentlich erwarten, da nutzungsfreundliche Tools zur Verfügung stehen, die ohnehin praktisch sind (Zotero, Citavi)
 
 --
 ## (2) Textstruktur
 * Wo stehen wir? <!-- .element: class="fragment" data-fragment-index="1" --> 
-  * Einige Plattformen bieten XML an (OpenEdition, OLH, DHQ, ZfdG)
-  * Nutzen dafür JATS oder XML-TEI
+  * Einige Plattformen bieten XML an (OpenEdition, OLH, DHQ, ZfdG, PLoS)
+  * Nutzen dafür meist JATS oder XML-TEI
+  * Teils wird auch LaTeX angeboten (bspw. arXiv)
 * Wo sollten wir hinkommen? <!-- .element: class="fragment" data-fragment-index="2" --> 
   * Zeitschriften bieten grundsätzlich XML (und EPUB, PDF) an
   * XML kodiert Makrostruktur und Mikrostruktur
   * Editoren kodieren das automatisch (semantische Formatvorlagen)
-
 
 --
 ## Ein Artikel in XML-TEI
@@ -174,11 +176,9 @@ Prof. Dr. Christof Schöch (Trier)
   * Abtracts und Schlagworte (= unstrukturiert)
   * Vorschlag "semantic abstracts" von David Shotton 2009
 * Wo müssten wir hinkommen?<!-- .element: class="fragment" data-fragment-index="2" --> 
-  * Thesen, Beobachtungen und Ergebnisse als LOD-Statements  
-  * Hindernisse: Mangel an Vokabularen und Ontologien für diverse Fachgebiete
-  * Hindernisse: Aufwand für die Formulierung der Statements
-  * Lösungsansatz: 
-  * Taxonomy Learning, vgl. Wang et al. 2017)
+  * Thesen, Beobachtungen und Ergebnisse als LOD-Statements
+  * Mehrere Hindernisse: Mangel an Ontologien; Aufwand für Autor:innen
+  * Lösungsansätze: Taxonomy Learning, vgl. Wang et al. 2017)
   * Information Extraction
 
 ::
@@ -206,9 +206,9 @@ ISBN:9780141985411 ...
 ## Offene Formate ermöglichen Open Science 
 * Intelligente Suche über viele Publikationen <!-- .element: class="fragment" data-fragment-index="1" --> 
 * Analyse von Zitationsnetzwerken  <!-- .element: class="fragment" data-fragment-index="2" --> 
-* Visualisierungen wie Karten, Zeitleisten uvm. <!-- .element: class="fragment" data-fragment-index="3" --> 
+* Linguistische Analysen der Wissenschaftssprache <!-- .element: class="fragment" data-fragment-index="3" --> 
 * Erheben des Forschungsstands zu einem Thema <!-- .element: class="fragment" data-fragment-index="4" --> 
-* Linguistische Analysen der Wissenschaftssprache <!-- .element: class="fragment" data-fragment-index="5" --> 
+* Rekonstruktion des Fachdiskurses in seiner Entwicklung <!-- .element: class="fragment" data-fragment-index="5 --> 
 * uvm... <!-- .element: class="fragment" data-fragment-index="5" --> 
 
 ::
@@ -220,16 +220,16 @@ ISBN:9780141985411 ...
 
 --
 ## Persönliches Fazit
-* Derzeit einiges in Bewegung
-* Mehraufwand für Autor:innen oder Herausgerber:innen?
-* Bessere Software! 
-* Ihre Meinung?
+* Derzeit einiges in Bewegung (Knowledge Graph)
+* Problem: Wer erbringt den Mehraufwand?
+* Wird bessere Software das Problem lösen?
 
 ::
 - Ich glaube nicht, dass sich die skizzierte Vision umsetzen lässt, wenn man den Zusatzaufwand den Autor:innen aufbürdet
 - Aber auch die nachträgliche Aufwertung, Annotation, Auszeichnung der Texte im Redaktionsprozess ist nicht sinnvoll
 - Wir brauchen endlich wissenschaftsadäquate, semantische Schreibsoftware, die den Schreibprozess adäquat unterstützt
 - Größtes Hindernis: der Mangel an geeigneten Ontologien oder Vokabularien für viele Wissenschaftsbereiche
+- Ihre Meinung würde mich sehr interessieren!
 
 
 
@@ -237,15 +237,12 @@ ISBN:9780141985411 ...
 --
 ## Referenzen
 <small>
-* Lüschow 2020
-* Schöch "Open Access für die Maschinen" 
-* Schöch "Abgeleitete Textformate" 
-* Shotton Semantic Abstracts" 
-* "Budapest Declaration on Open Access", 2002, https://www.budapestopenaccessinitiative.org/read. 
-* "Business Models", in: OADwiki, http://oad.simmons.edu/oadwiki/OA_journal_business_models.
-* "Geschäftsmodelle", in: open-access.net, https://open-access.net/informationen-zu-open-access/geschaeftsmodelle
-* Eve, Martin Paul, "How much does it cost to run a small scholarly publisher", 2017, eve.gd, https://eve.gd/2017/02/13/how-much-does-it-cost-to-run-a-small-scholarly-publisher/. 
-* Piwowar, Heather, Jason Priem, Vincent Larivière, Juan Pablo Alperin, Lisa Matthias, Bree Norlander, Ashley Farley, Jevin West, and Stefanie Haustein. “The State of OA: A Large-Scale Analysis of the Prevalence and Impact of Open Access Articles.” PeerJ 6 (February 13, 2018). https://doi.org/10.7717/peerj.4375.
+* Lüschow, Andreas (2020): "Automatische Extraktion und semantische Modellierung der Einträge einer Bibliographie französischsprachiger Romane", in: _Spielräume: Digital Humanities zwischen Modellierung und Interpretation. Konferenzabstracts_. Paderborn: DHd-Verband, S. 80–84. https://doi.org/10.5281/zenodo.3666690
+* Schöch, Christof (2020): "Open Access für die Maschinen", in: Maria Effinger und Hubertus Kohle (Hrsg.): _Die Zukunft des kunsthistorischen Publizierens_,
+Heidelberg: arthistoricum.net. https://doi.org/10.11588/arthistoricum.663.c9210
+* Schöch, Christof, Frédéric Döhl, Achim Rettinger, Evelyn Gius, Peer Trilcke, Peter Leinen, Fotis Jannidis, Maria Hinzmann, and Jörg Röpke (im Erscheinen): "Abgeleitete Textformate: Text Und Data Mining Mit Urheberrechtlich Geschützten Textbeständen", in: _Zeitschrift Für Digitale Geisteswissenschaften (ZfdG)_.
+* Shotton, David (2009): "Semantic Publishing: The Coming Revolution in Scientific Journal Publishing", in: _Learned Publishing_ 22.2, S. 85–94. https://doi.org/10.1087/2009202.
+* Wang, Chengyu, Xiaofeng He, and Aoying Zhou (2017): "A Short Survey on Taxonomy Learning from Text Corpora: Issues, Resources and Recent Advances", in: _Proceedings of the 2017 Conference on Empirical Methods in Natural Language Processing_, S. 1190–1203.
 
 </small>
 
